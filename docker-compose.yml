@@ -5,14 +5,14 @@ services:
     image: yobasystems/alpine-mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ChangeMe
+      MYSQL_ROOT_PASSWORD: Itop1234
     volumes:
       - '/srv/docker/itop/db:/var/lib/mysql'
   itop:
     build: .
     restart: always
     ports:
-      - 8080:80
+      - 10082:80
     links:
       - db
     depends_on:
